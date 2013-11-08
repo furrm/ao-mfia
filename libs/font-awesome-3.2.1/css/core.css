@@ -1,0 +1,5 @@
+NameError: .icon-FontAwesome is undefined in F:\ao_dev\PANYUKOP_AVALONALL_FURRM\AvalonApps\ao-bootstrap\src\www\libs\font-awesome-3.2.1\less\core.less on line 6, column 3:
+5 [class*=" icon-"] {
+6   .icon-FontAwesome();
+7 }
+

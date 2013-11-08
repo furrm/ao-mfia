@@ -1,0 +1,76 @@
+@import "mfia-branding";
+
+//.off-canvas-sidebar{
+//  > .ao-panel{
+//    .ao-panel;
+//
+//  }
+//}
+
+.sidebar.ao-panel, .main-content.ao-panel
+{
+  @panel-header-height:44px;
+  border:0px;
+
+  &.align-content-to-header{
+    padding-top: @panel-header-height;
+  }
+  > header{
+    height: @panel-header-height;
+  }
+  > header > .content > .off-canvas.icon-button{
+    height: @panel-header-height;
+  }
+  > section {
+//    background-color: @White;
+//    opacity: 0.4;
+  }
+}
+
+.sidebar.ao-panel{
+  > header {
+    background-color: @Black;
+  }
+  > header > .content > .off-canvas.icon-button{
+    color: @White;
+  }
+  > section {
+    background-color: @Black-Lighten;
+  }
+}
+
+.main-content.ao-panel{
+  > header {
+    background-color: @White;
+  }
+  > header > .content > .off-canvas.icon-button{
+    color: @Red;
+  }
+  > section {
+    background-color: @White-Lighten;
+  }
+}
+
+// SUBSCRIBED MATTERS
+.subscribed-matters.ao-panel{
+  @panel-header-height:44px;
+
+  border:0px;
+  > header{
+    height:@panel-header-height;
+    background-color: transparent;
+  }
+  > header > .content {
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+  }
+  > header > .content > input {
+    text-align: center;
+    background-color: #808080;
+    color: @White;
+    border:0px;
+//    content: "\f002";
+  }
+}
