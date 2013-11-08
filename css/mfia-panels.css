@@ -174,14 +174,14 @@
 .main-content.ao-panel > header {
   height: 44px;
 }
-.sidebar.ao-panel > header > .content > .off-canvas.icon-button,
-.main-content.ao-panel > header > .content > .off-canvas.icon-button {
+.sidebar.ao-panel > header > .off-canvas.icon-button,
+.main-content.ao-panel > header > .off-canvas.icon-button {
   height: 44px;
 }
 .sidebar.ao-panel > header {
   background-color: #000000;
 }
-.sidebar.ao-panel > header > .content > .off-canvas.icon-button {
+.sidebar.ao-panel > header > .off-canvas.icon-button {
   color: #ffffff;
 }
 .sidebar.ao-panel > section {
@@ -190,7 +190,7 @@
 .main-content.ao-panel > header {
   background-color: #ffffff;
 }
-.main-content.ao-panel > header > .content > .off-canvas.icon-button {
+.main-content.ao-panel > header > .off-canvas.icon-button {
   color: #b23427;
 }
 .main-content.ao-panel > section {
