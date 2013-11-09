@@ -1,7 +1,7 @@
 "use strict";
 angular.module('mfia', [
         'ngRoute',
-//    'services-common',
+    'services-common',
     'components-common'
 //    'components-lookups',
 //    'controllers-common'
@@ -9,14 +9,17 @@ angular.module('mfia', [
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/main', {
-                templateUrl: 'templates/content/main.html'
+                templateUrl: 'templates/content/main.html',
+                controller: 'AppCtrl'
             })
-//            .when('/signin', {
-//                templateUrl: 'templates/content/sign-in.html'
-//            })
-//            .when('/css', {
-//                templateUrl: 'templates/content/css.html'
-//            })
+            .when('/signin', {
+                templateUrl: 'templates/content/sign-in.html',
+                controller: 'AppCtrl'
+
+            })
+            .when('/reports', {
+                templateUrl: 'templates/content/reports.html'
+            })
 //            .when('/chart', {
 //                templateUrl: 'templates/content/chart.html'
 //            })
@@ -34,8 +37,43 @@ angular.module('mfia', [
 //            })
             .otherwise({redirectTo: '/main'});
     }])
-    .controller('appCtrl', function ($scope) {
+    .controller('AppCtrl', function ($scope, applicationStateMgr) {
     $scope.name = 'AppCtrl'
+
+        $scope.applicationStateMgr = applicationStateMgr;
+//        $location.path('signin');
+
+        $scope.go = function(){
+            //$location.path('/main');
+        };
+
+        $scope.signIn = function(username){
+            applicationStateMgr.manager.signInUser(username);
+        }
+
+        $scope.signOut = function(){
+            applicationStateMgr.manager.signOutUser();
+
+        };
+
+
+//        $scope.toggleSignIn = function(){
+//
+//            if(!applicationStateMgr.manager.userIsSignedIn)
+//            {
+//                applicationStateMgr.manager.signInUser();
+////                $location.path('/main');
+////                console.log(applicationStateMgr);
+//
+//            }
+//            else{
+//                applicationStateMgr.manager.signOutUser();
+////                $location.path('/signin');
+//                console.log(applicationStateMgr);
+//            }
+//        }
+
+
 
 })
 ;

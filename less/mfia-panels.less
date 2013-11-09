@@ -1,4 +1,5 @@
 @import "mfia-branding";
+@import "ao-semantics";
 
 //.off-canvas-sidebar{
 //  > .ao-panel{
@@ -74,4 +75,61 @@
     border:0px;
 //    content: "\f002";
   }
+}
+
+
+.ao-panel[title=signin] {
+//  @signin-background-color: @White-Lighten;
+  @panel-header-height: 40px;
+
+  background-color: @White-Lighten2;
+
+  &.align-content-to-header {
+    padding-top: @panel-header-height;
+  }
+  > header {
+    height: @panel-header-height;
+    background-color: @White-Lighten2;
+    color: red;
+  }
+  > section {
+    > .content {
+      > input {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 10px;
+        margin-bottom: 1px;
+      }
+      > input[type=text] {
+        .with.round.top.corners;
+        //        .rounded-top;
+        .remove-border;
+        background-color: @Black25;
+        color:@White;
+
+      }
+      > input[type=password] {
+        .with.round.bottom.corners;
+        .remove-border;
+        border-bottom: 1px solid @Black25;
+        background-color: @Black25;
+        color:@White;
+
+      }
+      > button {
+//        margin-top: 10px;
+//        width: 100%;
+//        background-color: @Fuchsia;
+      }
+    }
+  }
+}
+
+.ao-panel[type=welcome]{
+  margin-top: 100px;
+  height: 300px;
+  background-color: @White-Lighten2;
+  border:0px;
+  text-align: center;
 }

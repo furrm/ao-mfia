@@ -46,4 +46,12 @@ angular.module('components-common', [])
             replace: true
         }
     })
+    .directive('signIn', function () {
+        return{
+            restrict:'AE',
+            templateUrl:'templates/components/common/sign-in.html' ,
+            replace:true
+//            scope:{type:'@'}
+        }
+    })
 ;
